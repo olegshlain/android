@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/tv_select_your_favorite_drink"
+        android:textAllCaps="true"
+        android:textColor="#4C0E0E"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_coke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/tv_coke"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/tv_pepsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/tv_pepsi"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_coke"
+        app:layout_constraintStart_toStartOf="@+id/tv_coke"
+        app:layout_constraintTop_toBottomOf="@+id/tv_coke" />
+
+    <TextView
+        android:id="@+id/tv_schweppes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/tv_schweppes"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pepsi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_pepsi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pepsi" />
+
+    <TextView
+        android:id="@+id/tv_drPepper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/tv_dr_pepper"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_schweppes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_schweppes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_schweppes" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="57dp"
+            android:layout_height="97dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_coke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_coke"
+            app:srcCompat="@drawable/cola" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="57dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pepsi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pepsi"
+        app:srcCompat="@drawable/pepsi" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="57dp"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_schweppes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintStart_toEndOf="@+id/tv_schweppes"
+            app:layout_constraintTop_toTopOf="@+id/tv_schweppes"
+            app:srcCompat="@drawable/schweppes2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="57dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_drPepper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_drPepper"
+        app:layout_constraintTop_toTopOf="@+id/tv_drPepper"
+        app:srcCompat="@drawable/drpepper" />
+
+        <Button
+            android:id="@+id/btn_about_coke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/btn_coke_about"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_coke"
+            app:layout_constraintStart_toEndOf="@+id/tv_coke" />
+
+        <Button
+            android:id="@+id/btn_about_pepsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/btn_pepsi_about"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pepsi"
+            app:layout_constraintStart_toEndOf="@+id/tv_pepsi"
+            app:layout_constraintTop_toTopOf="@+id/tv_pepsi" />
+
+        <Button
+            android:id="@+id/btn_about_schweppes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/btn_schweppes_about"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_schweppes"
+            app:layout_constraintStart_toEndOf="@+id/tv_schweppes"
+            app:layout_constraintTop_toTopOf="@+id/tv_schweppes" />
+
+        <Button
+            android:id="@+id/btn_about_dr_pepper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/btn_dr_pepper_about"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_drPepper"
+            app:layout_constraintStart_toEndOf="@+id/tv_drPepper"
+            app:layout_constraintTop_toTopOf="@+id/tv_drPepper" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
